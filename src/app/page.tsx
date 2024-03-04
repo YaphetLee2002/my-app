@@ -9,19 +9,19 @@ export default function Home() {
             <div className="flex items-center justify-center h-screen absolute top-0">
                 <div className="w-1/4 h-screen relative hover-img">
                     <Image className="w-full h-full object-cover brightness-50 hover:brightness-90 transition-all"
-                           src="/pic1.jpg" alt="pic1" width={1000} height={1000}/>
+                           src="/img1.jpg" alt="pic1" width={1000} height={1000}/>
                 </div>
                 <div className="w-1/4 h-screen relative hover-img">
                     <Image className="w-full h-full object-cover brightness-50 hover:brightness-90 transition-all"
-                           src="/pic2.jpg" alt="pic2" width={1000} height={1000}/>
+                           src="/img2.jpg" alt="pic2" width={1000} height={1000}/>
                 </div>
                 <div className="w-1/4 h-screen relative hover-img">
                     <Image className="w-full h-full object-cover brightness-50 hover:brightness-90 transition-all"
-                           src="/pic3.jpg" alt="pic3" width={1000} height={1000}/>
+                           src="/img3.jpg" alt="pic3" width={1000} height={1000}/>
                 </div>
                 <div className="w-1/4 h-screen relative hover-img">
                     <Image className="w-full h-full object-cover brightness-50 hover:brightness-90 transition-all"
-                           src="/pic4.webp" alt="pic4" width={1000} height={1000}/>
+                           src="/img4.webp" alt="pic4" width={1000} height={1000}/>
                 </div>
             </div>
             <div className="relative top-32 text-center drop-shadow-lg text-indigo-50 text-7xl  font-extrabold">
