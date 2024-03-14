@@ -6,6 +6,7 @@ import {Card, CardContent} from "@/components/ui/card";
 import ScrollOpacity from "@/components/scrollopacity.client";
 import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "@/components/ui/carousel";
 import Videoplay from "@/components/videoplay";
+import Head from "next/head";
 
 export default function Home() {
     return (
@@ -35,7 +36,6 @@ export default function Home() {
                            src="/img4.webp" alt="pic4" width={1000} height={1000}/>
                 </div>
             </div>
-            <br/>
 
             <div className="relative">
                 <img src="/bg1.webp" alt="bg1" className="w-full h-auto"/>
@@ -72,6 +72,7 @@ export default function Home() {
                 </div>
             </div>
         </div>
+
 
     );
 }
