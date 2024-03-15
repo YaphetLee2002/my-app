@@ -76,15 +76,25 @@ export default function Home() {
                         textAlign: 'center',
                         fontSize: '1.2vw',
                     }}>
-                        <Separator/>
-                        <p className="text-left font-serif font-extrabold" style={
-                            {
-                                fontSize: '2vw',
-                            }
-                        }>
-                            The Idea of DreamFactory
-                        </p>
-                        <Separator/>
+
+                        <div style={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                        }}>
+                            <div>
+                                <Separator className="h-[7px]"/>
+                                <p className="text-left font-serif font-extrabold" style={{
+                                    fontSize: '2vw',
+                                }}>
+                                    The Idea of DreamFactory
+                                </p>
+                                <Separator className="h-[3px]"/>
+                            </div>
+                        </div>
+
+
                         <br/>
                         <p className="text-left">
                             &nbsp;&nbsp;The DreamFactory framework is a cutting-edge multi-agent system designed to
