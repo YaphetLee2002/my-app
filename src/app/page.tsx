@@ -1,29 +1,41 @@
-import {Button} from "@/components/ui/button";
 import Image from "next/image";
 import Title from "@/components/title";
-import {Separator} from "@/components/ui/separator";
 import {Card, CardContent} from "@/components/ui/card";
-import ScrollOpacity from "@/components/scrollopacity.client";
 import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "@/components/ui/carousel";
 import Videoplay from "@/components/videoplay";
-import {Helmet} from "react-helmet";
+import ProfileForm from "@/components/textareaform";
+import {Separator} from "@/components/ui/separator";
 
-const TITLE = 'My Page Title';
-
-export const metadata = {
-    title: "Dream Factory",
-    description: "An automatic framework for multi-scene long video synthesis",
-};
 
 export default function Home() {
     return (
         <div className="bg-black">
             <Title/>
-            <div className="z-50 fixed top-4 left-4">
-                <Image src="/tsinghua.png" alt="Logo" width={40} height={40} priority/>
+            <div className="z-50 fixed top-4 left-4 flex items-center">
+                <Image src="/Tsinghua_University_Logo.svg" alt="Logo" width={70} height={70} priority/>
+                <Image src="/University_of_Luxembourg.svg" alt="github" width={70} height={70} className="ml-8"/>
             </div>
-            <div className="z-50 fixed top-4 right-4 flex items-center justify-center">
-                <Button className="text-indigo-500 bg-indigo-50 hover:bg-indigo-100">Contact Us</Button>
+            <div className="z-50 fixed top-4 right-6 flex items-center justify-center mt-2">
+                <a href="#" className="flex items-center justify-center mr-8">
+                    <div className="text-white underline">
+                        Paper Link↗︎
+                    </div>
+                    <Image src="/paper.svg" alt="contact" width={20} height={20} priority style={{margin: '5px'}}/>
+                </a>
+                <a href="#about" className="flex items-center justify-center mr-8">
+                    <div className="text-white underline">
+                        About Us↗︎
+                    </div>
+                    <Image src="/about.svg" alt="contact" width={20} height={20} priority style={{margin: '5px'}}/>
+                </a>
+                <a href="#" className="flex items-center justify-center mr-8">
+                    <div className="text-white underline">
+                        Github Page↗︎
+                    </div>
+                    <Image src="/github.svg" alt="contact" width={20} height={20} priority style={{margin: '5px'}}/>
+                </a>
+                <ProfileForm/>
+
             </div>
             <div className="flex items-center justify-center h-screen ">
                 <div className="w-1/4 h-screen relative hover-img z-0">
@@ -45,21 +57,69 @@ export default function Home() {
             </div>
             <br/>
             <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <div className="text-indigo-50 text-2xl">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.</p>
+            <a id="about"></a>
+            <div className="text-indigo-50 font-mono ml-48 mr-48"
+                 style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                <div className="image-container-bottom" style={{position: 'relative'}}>
+                    <Image src="/icon-bg.png" alt="icon" className="brightness-75" width={3000} height={3000}
+                           style={{objectFit: 'cover'}}/>
+                    <div className="animate-fade-in-slide-down" style={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        width: '100%',
+                        height: '100%',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        textAlign: 'center',
+                        fontSize: '1.2vw',
+                    }}>
+                        <Separator/>
+                        <p className="text-left font-serif font-extrabold" style={
+                            {
+                                fontSize: '2vw',
+                            }
+                        }>
+                            The Idea of DreamFactory
+                        </p>
+                        <Separator/>
+                        <br/>
+                        <p className="text-left">
+                            &nbsp;&nbsp;The DreamFactory framework is a cutting-edge multi-agent system designed to
+                            generate
+                            multi-scene videos. This innovative framework leverages the collaborative efforts of
+                            multiple agents, each specialized in different aspects of video production, such as
+                            scripting, animation, sound design, and scene transition, to create complex and coherent
+                            video narratives.
+                        </p>
+                        <br/>
 
+                        <p className="text-left">
+                            &nbsp;&nbsp;At its core, DreamFactory utilizes a decentralized approach where each agent
+                            operates
+                            semi-autonomously, contributing its expertise to various segments of the video. This
+                            multi-agent collaboration ensures that each scene is crafted with attention to detail,
+                            ensuring consistency in style, narrative flow, and thematic elements across different
+                            scenes.
+                        </p>
+                        <br/>
+
+                        <p className="text-left">
+                            &nbsp;&nbsp;Overall, working with DreamFactory is akin to having a team of employees in a
+                            company
+                            working together. Each agent, like an individual employee, contributes their unique skills
+                            and expertise towards achieving a common goal, collaborating and coordinating their efforts
+                            in a way that enhances the overall performance and outcome of the team.
+                        </p>
+                    </div>
+                </div>
+                <br/>
             </div>
             <br/>
             <br/>
-            <br/>
+
             <div className="relative">
                 <div className="image-container-top">
                     <img src="/bg1.webp" alt="bg1" className="w-full h-auto"/>
