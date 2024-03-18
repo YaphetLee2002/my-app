@@ -5,9 +5,12 @@ import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious}
 import Videoplay from "@/components/videoplay";
 import ProfileForm from "@/components/textareaform";
 import {Separator} from "@/components/ui/separator";
-
+import DropdownMenuRadioGroupButton from "@/components/language-choose";
+import {useTranslation} from "next-i18next";
+import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 
 export default function Home() {
+
     return (
         <div className="bg-black">
             <Title/>
@@ -28,13 +31,15 @@ export default function Home() {
                     </div>
                     <Image src="/about.svg" alt="contact" width={20} height={20} priority style={{margin: '5px'}}/>
                 </a>
-                <a href="#" className="flex items-center justify-center mr-8">
+                <a href="https://github.com/dreamfactory24/DreamFactory"
+                   className="flex items-center justify-center mr-8">
                     <div className="text-white underline">
                         Github Page↗︎
                     </div>
                     <Image src="/github.svg" alt="contact" width={20} height={20} priority style={{margin: '5px'}}/>
                 </a>
                 <ProfileForm/>
+                {/*<DropdownMenuRadioGroupButton/>*/}
 
             </div>
             <div className="flex items-center justify-center h-screen ">
@@ -58,75 +63,97 @@ export default function Home() {
             <br/>
             <br/>
             <a id="about"></a>
-            <div className="text-indigo-50 font-mono ml-48 mr-48"
-                 style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                <div className="image-container-bottom" style={{position: 'relative'}}>
-                    <Image src="/icon-bg.png" alt="icon" className="brightness-75" width={3000} height={3000}
-                           style={{objectFit: 'cover'}}/>
-                    <div className="animate-fade-in-slide-down" style={{
-                        position: 'absolute',
-                        top: 0,
-                        left: 0,
-                        width: '100%',
-                        height: '100%',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        textAlign: 'center',
-                        fontSize: '1.2vw',
-                    }}>
-
-                        <div style={{
-                            display: 'flex',
-                            justifyContent: 'center',
-                            flexDirection: 'row',
-                            alignItems: 'center',
-                        }}>
-                            <div>
-                                <Separator className="h-[7px]"/>
-                                <p className="text-left font-serif font-extrabold" style={{
-                                    fontSize: '2vw',
-                                }}>
-                                    The Idea of DreamFactory
-                                </p>
-                                <Separator className="h-[3px]"/>
-                            </div>
-                        </div>
-
-
-                        <br/>
-                        <p className="text-left">
-                            &nbsp;&nbsp;The DreamFactory framework is a cutting-edge multi-agent system designed to
-                            generate
-                            multi-scene videos. This innovative framework leverages the collaborative efforts of
-                            multiple agents, each specialized in different aspects of video production, such as
-                            scripting, animation, sound design, and scene transition, to create complex and coherent
-                            video narratives.
-                        </p>
-                        <br/>
-
-                        <p className="text-left">
-                            &nbsp;&nbsp;At its core, DreamFactory utilizes a decentralized approach where each agent
-                            operates
-                            semi-autonomously, contributing its expertise to various segments of the video. This
-                            multi-agent collaboration ensures that each scene is crafted with attention to detail,
-                            ensuring consistency in style, narrative flow, and thematic elements across different
-                            scenes.
-                        </p>
-                        <br/>
-
-                        <p className="text-left">
-                            &nbsp;&nbsp;Overall, working with DreamFactory is akin to having a team of employees in a
-                            company
-                            working together. Each agent, like an individual employee, contributes their unique skills
-                            and expertise towards achieving a common goal, collaborating and coordinating their efforts
-                            in a way that enhances the overall performance and outcome of the team.
-                        </p>
+            <div className="relative flex justify-center items-center">
+                <img src="/bg3.png"/>
+                <div className="absolute top-32 left-32 font-serif justify-center items-center drop-shadow-2xl flex">
+                    <div className="text-white font-bold" style={{fontSize: '4vw'}}>|</div>
+                    <div className="text-white" style={{fontSize: '4vw', marginLeft: '-0.7vw'}}>|</div>
+                    <div className="text-white" style={{fontSize: '3vw', marginLeft: '-0.5vw'}}>&nbsp;Idea of
+                        DreamFactory
                     </div>
                 </div>
-                <br/>
+
+                <div className="w-2/3 absolute text-center justify-center items-center flex">
+                    <div className="w-1/3">
+                        <div className=" text-white font-serif" style={{fontSize: '2.5vw'}}>|Automatic|</div>
+                        <div className=" text-white font-serif" style={{fontSize: '1.6vw'}}>&quot;Your idea, a click
+                            away from the full film&quot;
+                        </div>
+                    </div>
+                    <div className="m-10 w-1/3">
+                        <div className=" text-white font-serif drop-shadow-2xl" style={{fontSize: '2.5vw'}}>|Powerful|
+                        </div>
+                        <div className=" text-white font-serif" style={{fontSize: '1.6vw'}}>&quot;Top-tier film crew
+                            configuration, professional, flawless&quot;
+                        </div>
+                    </div>
+                    <div className=" w-1/3">
+                        <div className=" text-white font-serif drop-shadow-2xl"
+                             style={{fontSize: '2.5vw'}}>|Practical|
+                        </div>
+                        <div className=" text-white font-serif" style={{fontSize: '1.6vw'}}>&quot;Available anytime,
+                            anywhere, averaging 20s per scene.&quot;
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <br/>
+            <br/>
+            <br/>
+
+            <div className="relative flex-col">
+                <div className="mb-16 w-full text-center">
+                    <div className=" text-white font-serif" style={{fontSize: '1.7vw'}}>
+                        AGI assists you in everything, conceiving interesting plots, designing aesthetic shots, and
+                        creating diverse characters.
+                    </div>
+                </div>
+
+                <div className="ml-32 mr-32 text-center justify-center items-center flex">
+                    <div className="w-1/2">
+                        <Image src="/round1.png" alt="round1" style={{margin: '0 auto'}} width={500} height={500}/>
+                        <br/>
+                        <div className="text-white font-serif mt-5" style={{fontSize: '1.6vw'}}>
+                            I. Role Definition
+                        </div>
+                        <div className="text-white font-mono mt-5" style={{fontSize: '1.6vw'}}>
+                            You are a director!
+                        </div>
+                    </div>
+                    <div className="m-10 w-1/8">
+                        <Image src="/arrow1.png" alt="arrow1" width={200} height={200}/>
+                    </div>
+                    <div className="m-10 w-1/2">
+                        <div className="text-white font-serif mb-5" style={{fontSize: '1.6vw'}}>
+                            II. Role Playing
+                        </div>
+                        <div className="text-white font-mono mb-5" style={{fontSize: '1.6vw'}}>
+                            3 2 1 Action!
+                        </div>
+                        <Image src="/round2.png" alt="round2" style={{margin: '0 auto'}} width={350} height={350}/>
+                    </div>
+                    <div className="m-10 w-1/8">
+                        <Image src="/arrow2.png" alt="arrow2" width={200} height={200}/>
+                    </div>
+                    <div className=" w-1/2">
+                        <Image src="/round3.png" alt="round3" style={{margin: '0 auto'}} width={500} height={500}/>
+                        <br/>
+                        <div className="text-white font-serif mt-5" style={{fontSize: '1.6vw'}}>
+                            III. Movies Done !
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
             <br/>
             <br/>
 
