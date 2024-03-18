@@ -102,16 +102,20 @@ export default function Home() {
             <br/>
             <br/>
 
-            <div className="relative flex-col">
-                <div className="mb-16 w-full text-center">
-                    <div className=" text-white font-serif" style={{fontSize: '1.7vw'}}>
+            <div className="relative flex justify-center items-center">
+                <div className="mask">
+                    <Image src="/icon-bg.png" alt="icon-bg" width={5000} height={5000} className="brightness-50"/>
+
+                </div>
+                <div className="absolute top-16 left-32 font-serif justify-center items-center drop-shadow-2xl flex">
+                    <div className=" text-white font-serif drop-shadow-2xl" style={{fontSize: '1.7vw'}}>
                         AGI assists you in everything, conceiving interesting plots, designing aesthetic shots, and
                         creating diverse characters.
                     </div>
                 </div>
 
-                <div className="ml-32 mr-32 text-center justify-center items-center flex">
-                    <div className="w-1/2">
+                <div className="absolute ml-32 mr-32 text-center justify-center items-center flex">
+                    <div className="w-1/4">
                         <Image src="/round1.png" alt="round1" style={{margin: '0 auto'}} width={500} height={500}/>
                         <br/>
                         <div className="text-white font-serif mt-5" style={{fontSize: '1.6vw'}}>
@@ -121,10 +125,10 @@ export default function Home() {
                             You are a director!
                         </div>
                     </div>
-                    <div className="m-10 w-1/8">
+                    <div className="m-10 w-1/16">
                         <Image src="/arrow1.png" alt="arrow1" width={200} height={200}/>
                     </div>
-                    <div className="m-10 w-1/2">
+                    <div className="m-10 w-1/4">
                         <div className="text-white font-serif mb-5" style={{fontSize: '1.6vw'}}>
                             II. Role Playing
                         </div>
@@ -133,10 +137,10 @@ export default function Home() {
                         </div>
                         <Image src="/round2.png" alt="round2" style={{margin: '0 auto'}} width={350} height={350}/>
                     </div>
-                    <div className="m-10 w-1/8">
+                    <div className="m-10 w-1/16">
                         <Image src="/arrow2.png" alt="arrow2" width={200} height={200}/>
                     </div>
-                    <div className=" w-1/2">
+                    <div className=" w-1/4">
                         <Image src="/round3.png" alt="round3" style={{margin: '0 auto'}} width={500} height={500}/>
                         <br/>
                         <div className="text-white font-serif mt-5" style={{fontSize: '1.6vw'}}>
