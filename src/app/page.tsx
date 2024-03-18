@@ -4,10 +4,6 @@ import {Card, CardContent} from "@/components/ui/card";
 import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "@/components/ui/carousel";
 import Videoplay from "@/components/videoplay";
 import ProfileForm from "@/components/textareaform";
-import {Separator} from "@/components/ui/separator";
-import DropdownMenuRadioGroupButton from "@/components/language-choose";
-import {useTranslation} from "next-i18next";
-import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 
 export default function Home() {
 
@@ -39,7 +35,6 @@ export default function Home() {
                     <Image src="/github.svg" alt="contact" width={20} height={20} priority style={{margin: '5px'}}/>
                 </a>
                 <ProfileForm/>
-                {/*<DropdownMenuRadioGroupButton/>*/}
 
             </div>
             <div className="flex items-center justify-center h-screen ">
