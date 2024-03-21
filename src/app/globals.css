@@ -130,7 +130,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100px;
+  height: 30%;
   background: linear-gradient(to top, rgba(0, 0, 0, 0), rgb(0, 0, 0));
 }
 
@@ -142,12 +142,12 @@
 .image-container-bottom::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
+  bottom: 0;
   width: 100%;
-  height: 950px;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0));
+  height: 30%; /* 只应用渐变效果的高度 */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(255, 255, 255));
 }
+
 
 .gradient-overlay {
   position: relative;
@@ -175,17 +175,16 @@
 }
 
 .mask {
-  margin: auto;
   position: relative;
+  overflow: hidden;
 }
 
 .mask::after {
-  content: '';
+  content: "";
   position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
   bottom: 0;
-  background: radial-gradient(transparent 10%, #000000 100%);
+  width: 100%;
+  height: 30%; /* 只应用渐变效果的高度 */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0));
 }
 

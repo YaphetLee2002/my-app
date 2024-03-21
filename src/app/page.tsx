@@ -4,53 +4,27 @@ import {Card, CardContent} from "@/components/ui/card";
 import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "@/components/ui/carousel";
 import Videoplay from "@/components/videoplay";
 import ProfileForm from "@/components/textareaform";
-
+import WaterFall from "@/components/watercontainer";
+import Band from "@/components/band";
 export default function Home() {
-
     return (
-        <div className="bg-black">
+        <div className="bg-black" style={{overflowX: "hidden"}}>
             <Title/>
-            <div className="z-50 fixed top-4 left-4 flex items-center">
-                <Image src="/Tsinghua_University_Logo.svg" alt="Logo" width={70} height={70} priority/>
-                <Image src="/University_of_Luxembourg.svg" alt="github" width={70} height={70} className="ml-8"/>
-            </div>
-            <div className="z-50 fixed top-4 right-6 flex items-center justify-center mt-2">
-                <a href="#" className="flex items-center justify-center mr-8">
-                    <div className="text-white underline">
-                        Paper Link↗︎
-                    </div>
-                    <Image src="/paper.svg" alt="contact" width={20} height={20} priority style={{margin: '5px'}}/>
-                </a>
-                <a href="#about" className="flex items-center justify-center mr-8">
-                    <div className="text-white underline">
-                        About Us↗︎
-                    </div>
-                    <Image src="/about.svg" alt="contact" width={20} height={20} priority style={{margin: '5px'}}/>
-                </a>
-                <a href="https://github.com/dreamfactory24/DreamFactory"
-                   className="flex items-center justify-center mr-8">
-                    <div className="text-white underline">
-                        Github Page↗︎
-                    </div>
-                    <Image src="/github.svg" alt="contact" width={20} height={20} priority style={{margin: '5px'}}/>
-                </a>
-                <ProfileForm/>
-
-            </div>
+            <Band/>
             <div className="flex items-center justify-center h-screen ">
-                <div className="w-1/4 h-screen relative hover-img z-0">
+                <div className="w-1/4 h-screen relative hover-img z-0 mask">
                     <Image className="w-full h-full object-cover brightness-75 hover:brightness-125 transition-all"
                            src="/img4.jpg" alt="pic1" width={1000} height={1000}/>
                 </div>
-                <div className="w-1/4 h-screen relative hover-img z-0">
+                <div className="w-1/4 h-screen relative hover-img z-0 mask">
                     <Image className="w-full h-full object-cover brightness-50 hover:brightness-90 transition-all"
                            src="/img2.jpg" alt="pic2" width={1000} height={1000}/>
                 </div>
-                <div className="w-1/4 h-screen relative hover-img z-0">
+                <div className="w-1/4 h-screen relative hover-img z-0 mask">
                     <Image className="w-full h-full object-cover brightness-50 hover:brightness-90 transition-all"
                            src="/img3.webp" alt="pic3" width={1000} height={1000}/>
                 </div>
-                <div className="w-1/4 h-screen relative hover-img z-0">
+                <div className="w-1/4 h-screen relative hover-img z-0 mask">
                     <Image className="w-full h-full object-cover brightness-50 hover:brightness-90 transition-all"
                            src="/img1.jpg" alt="pic4" width={1000} height={1000}/>
                 </div>
@@ -100,7 +74,6 @@ export default function Home() {
             <div className="relative flex justify-center items-center">
                 <div className="mask">
                     <Image src="/icon-bg.png" alt="icon-bg" width={5000} height={5000} className="brightness-50"/>
-
                 </div>
                 <div className="absolute top-16 left-32 font-serif justify-center items-center drop-shadow-2xl flex">
                     <div className=" text-white font-serif drop-shadow-2xl" style={{fontSize: '1.7vw'}}>
@@ -157,8 +130,10 @@ export default function Home() {
             <br/>
 
             <div className="relative">
-                <div className="image-container-top">
-                    <img src="/bg1.webp" alt="bg1" className="w-full h-auto"/>
+                <div className="image-container-bottom">
+                    <div className="image-container-top">
+                        <img src="/bg1.webp" alt="bg1" className="w-full h-auto"/>
+                    </div>
                 </div>
                 <div className="absolute-center1 text-center justify-center items-center">
                     <img src="/bg2.png" alt="bg2"/>
@@ -191,6 +166,10 @@ export default function Home() {
                         </Carousel>
                     </div>
                 </div>
+            </div>
+            <div className="bg-white">
+                <WaterFall/>
+
             </div>
         </div>
 
