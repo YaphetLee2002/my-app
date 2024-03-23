@@ -18,34 +18,89 @@ export function WaterFall() {
     const getList = () => {
         const newList: item[] = [
             {
-                src: "https://p2.music.126.net/va9D07KDeS1ovOYAsoXE9A==/7929677859630995.jpg",
+                src: "/output/cat_and_boy/photos/DALL·E 2024-02-29 19.41.00 - Create a highly detailed image of a small white kitten standing on an icy surface looking towards the camera. The image should have a complementary co.webp",
                 text: "测试文字",
                 scale: 1,
             },
             {
-                src: "https://ts1.cn.mm.bing.net/th/id/R-C.b0ea268fa1be279d112489ce83ad4696?rik=qItsh%2fBiy33hlg&riu=http%3a%2f%2fwww.quazero.com%2fuploads%2fallimg%2f140303%2f1-140303215009.jpg&ehk=S6PLWamt%2bMzQV8uO9ugcU5d5M19BpXtCpNz2cRJ7q9M%3d&risl=&pid=ImgRaw&r=0",
+                src: "/output/cat_and_boy/photos/DALL·E 2024-02-29 19.41.19 - A white kitten is walking towards the young boy from Iceland who is fishing on the frozen lake surface. The scene includes soft lighting and sharp det.webp",
                 text: "测试文字2",
-                scale: 572 / 982,
+                scale: 1,
             },
             {
-                src: "https://scpic.chinaz.net/files/pic/pic9/202009/apic27858.jpg",
+                src: "/output/cat_and_boy/photos/DALL·E 2024-02-29 19.47.18 - A young boy from Iceland is giving a small fish to the white kitten by the frozen lake. The image should capture the moment the boy extends the fish t.webp",
                 text: "测试文字3",
-                scale: 581 / 434,
+                scale: 1,
             },
             {
-                src: "https://ts1.cn.mm.bing.net/th/id/R-C.5245459c4835900f30183bebecb3cb55?rik=koS%2bxytGvrBRHw&riu=http%3a%2f%2fpic.zsucai.com%2ffiles%2f2013%2f0723%2fsdidjj4.jpg&ehk=WJLRakwfHBZS2aO2sK%2bCdh4ijkXwyYijy5Z2BFUdnz4%3d&risl=&pid=ImgRaw&r=0",
+                src: "/output/cat_and_boy/photos/DALL·E 2024-02-29 20.10.47 - A young boy in a cozy brown jacket is tenderly holding a fluffy white kitten in his arms. They are on a beach with soft lighting enhancing the warm an.webp",
                 text: "测试文字4",
-                scale: 575 / 356,
+                scale: 1,
             },
             {
-                src: "https://ts1.cn.mm.bing.net/th/id/R-C.f40ba86561918519b95431a5921e4f5d?rik=9AIbo9AhOYel0w&riu=http%3a%2f%2fwww.quazero.com%2fuploads%2fallimg%2f131210%2f1-131210210248.jpg&ehk=v81JiWKphT%2baLBzbhrxRkTUUwwnhJ5F2PFkm4xn4nEM%3d&risl=&pid=ImgRaw&r=0",
+                src: "/output/desert/1.png",
                 text: "测试文字5",
-                scale: 578 / 327,
+                scale: 1,
             },
             {
-                src: "https://ts1.cn.mm.bing.net/th/id/R-C.0dee2228031e4ef5b03d0c5734aef866?rik=BD%2bnjbFbllVmEQ&riu=http%3a%2f%2fimg.zcool.cn%2fcommunity%2f01cf02554336f10000019ae9df1dad.jpg%403000w_1l_2o_100sh.jpg&ehk=zvcYgjHlqK2U2x9ploUbmiBIk7BewUd6lyA0AIswegQ%3d&risl=&pid=ImgRaw&r=0",
+                src: "/output/desert/2.png",
                 text: "测试文字6",
-                scale: 581 / 868,
+                scale: 16 / 9,
+            },
+            {
+                src: "/output/desert/3.png",
+                text: "测试文字7",
+                scale: 16 / 9,
+            },
+            {
+                src: "/output/desert/4.png",
+                text: "测试文字8",
+                scale: 1,
+            },
+            {
+                src: "/output/desert/5.png",
+                text: "测试文字9",
+                scale: 1,
+            },
+            {
+                src: "/output/desert/6.png",
+                text: "测试文字10",
+                scale: 16 / 9,
+            },
+            {
+                src: "/output/desert/7.png",
+                text: "测试文字11",
+                scale: 16 / 9,
+            },
+            {
+                src: "/output/girl/1.png",
+                text: "测试文字12",
+                scale: 9 / 16,
+            },
+            {
+                src: "/output/girl/2.png",
+                text: "测试文字13",
+                scale: 9 / 16,
+            },
+            {
+                src: "/output/girl/3.png",
+                text: "测试文字14",
+                scale: 9 / 16,
+            },
+            {
+                src: "/output/girl/4.png",
+                text: "测试文字15",
+                scale: 9 / 16,
+            },
+            {
+                src: "/output/girl/5.png",
+                text: "测试文字16",
+                scale: 9 / 16,
+            },
+            {
+                src: "/output/girl/6.png",
+                text: "测试文字17",
+                scale: 9 / 16,
             },
         ];
         //使用定时器模拟HTTP请求，延时1s返回数据
